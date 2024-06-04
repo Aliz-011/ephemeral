@@ -27,8 +27,8 @@ const formSchema = z.object({
   name: z.string(),
   price: z.string(),
   img: z.string(),
-  categoryId: z.string().nullable().optional(),
-  description: z.string().nullable().optional(),
+  categoryId: z.string().nullable(),
+  description: z.string().nullable(),
 });
 
 const apiSchema = insertProductSchema.omit({
@@ -52,7 +52,7 @@ type Props = {
   onCreateCategory: (name: string) => void;
 };
 
-export const ProductForm = ({
+export const OrderForm = ({
   onSubmit,
   defaultValues,
   disabled,

@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/sheet';
 
 import { useOpenProduct } from '@/features/products/hooks/use-open-product';
-import { ProductForm } from '@/features/products/components/product-form';
+import { OrderForm } from '@/features/orders/components/order-form';
 import { useDeleteProduct } from '@/features/products/api/use-delete-product';
 import { useEditProduct } from '@/features/products/api/use-edit-product';
 import { useGetProduct } from '@/features/products/api/use-get-product';
@@ -98,7 +98,7 @@ export const EditOrderSheet = () => {
               <Loader2 className="text-muted-foreground animate-none size-4" />
             </div>
           ) : (
-            <ProductForm
+            <OrderForm
               id={id}
               defaultValues={defaultValues}
               categoryOptions={categoryOptions}
